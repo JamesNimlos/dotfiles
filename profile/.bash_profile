@@ -1,5 +1,6 @@
 source ~/.profile
 source ~/.bashrc
+[ -f ~/.bash_private ] && source ~/.bash_private
 
 alias crap='crap'
 alias crappy='crap -y'
@@ -40,4 +41,5 @@ if [ -f '/Users/james/google-cloud-sdk/path.bash.inc' ]; then source '/Users/jam
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/james/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/james/google-cloud-sdk/completion.bash.inc'; fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export JAVA_HOME=$(/usr/libexec/java_home)
+PATH=$PATH:$JAVA_HOME
