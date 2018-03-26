@@ -10,19 +10,19 @@ defaults write com.apple.finder CreateDesktop false; killall Finder
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=” “
 
-./upgrade.sh
-
 # install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+./upgrade.sh
 
 # install node & yarn
 brew install yarn
 
 # install n package manager
-npm install -g n
+yarn global add n
 
 # take back control of node from brew
-sudo n latest
+sudo n lts
 
 # see git/.gitconfig for reference
 npm install -g diff-so-fancy
