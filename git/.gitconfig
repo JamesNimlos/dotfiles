@@ -52,6 +52,7 @@
         l = log --pretty=custom                      # Show custom log
         ll = log --stat --abbrev-commit
         lc = shortlog --summary --numbered           # List contributors
+	lo = log --oneline
 
         # Reset
         unstage = reset HEAD --                      # Mixed reset (affects HEAD and Index)
@@ -102,7 +103,7 @@
 
 [core]
         editor = vim
-        excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
         autocrlf = input
         mergeoptions = --no-edit
         ignorecase = false
